@@ -29,14 +29,14 @@ cd /home/ec2-user
 echo "Fetching parameters from SSM..."
 
 MYSQL_HOST=$(aws ssm get-parameter \
-  --name "/cheetah/dev/mysql/host" \
+  --name "/goutham/dev/mysql/host" \
   --region $REGION \
   --with-decryption \
   --query "Parameter.Value" \
   --output text)
 
 MYSQL_USERNAME=$(aws ssm get-parameter \
-  --name "/cheetah/dev/mysql/username" \
+  --name "/goutham/dev/mysql/username" \
   --region $REGION \
   --with-decryption \
   --query "Parameter.Value" \
@@ -44,7 +44,7 @@ MYSQL_USERNAME=$(aws ssm get-parameter \
 
 
 MYSQL_PASSWORD=$(aws ssm get-parameter \
-  --name "/cheetah/dev/mysql/password" \
+  --name "/goutham/dev/mysql/password" \
   --region $REGION \
   --with-decryption \
   --query "Parameter.Value" \
@@ -55,7 +55,7 @@ echo "Parameters fetched successfully"
 # --------------------------------------------------
 # Download Spring Boot Application
 # --------------------------------------------------
-aws s3 cp s3://cheetah-dev-be-app-bucket-new/datastore-0.0.7.jar .
+aws s3 cp s3://goutham-dev-be-app-bucket-new/datastore-0.0.7.jar .
 
 chmod 755 datastore-0.0.7.jar
 chown ec2-user:ec2-user datastore-0.0.7.jar
