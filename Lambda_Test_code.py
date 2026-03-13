@@ -1,6 +1,6 @@
 import json
 import os
-import urllib.re quest
+import urllib.request
 #  add environment value in lambda key=SLACK_WEBHOOK_URL, value=webhook_url
 slack_webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
 
