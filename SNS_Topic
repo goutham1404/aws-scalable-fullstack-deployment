@@ -10,10 +10,10 @@
         "Service": "cloudwatch.amazonaws.com"
       },
       "Action": "sns:Publish",
-      "Resource": "arn:aws:sns:us-east-1:851725238641:cheetah-dev-be-error-notify",
+      "Resource": "arn:aws:sns:us-east-1:271434548387:dev-be-notification",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "arn:aws:cloudwatch:us-east-1:851725238641:alarm:cheetah-dev-error-alarm"
+          "aws:SourceArn": "arn:aws:cloudwatch:us-east-1:271434548387:alarm:dev-be-alarm"
         }
       }
     }
