@@ -30,7 +30,8 @@ After=network.target
 User=root
 WorkingDirectory=/root
 ExecStart=/root/venv/bin/streamlit run app.py --server.port=8501 --server.address=0.0.0.0
-Environment=API_URL=http://cheetah-dev-backend-lb-cf954d3679c06e98.elb.us-east-1.amazonaws.com
+# backend nlb dns name
+Environment=API_URL=http://dev-be-nlb-e5e9ea71b7863606.elb.us-east-1.amazonaws.com
 Restart=always
 
 [Install]
