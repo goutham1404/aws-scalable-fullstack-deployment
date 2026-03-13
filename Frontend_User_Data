@@ -19,7 +19,7 @@ source /root/venv/bin/activate
 pip install --upgrade pip
 pip install streamlit requests
 
-aws s3 cp s3://cheetah-dev-fe-app-bucket/app.py /root/
+aws s3 cp s3://goutham-dev-fe-app-bucket-new/app.py /root/
 
 cat << EOF > /etc/systemd/system/frontend.service
 [Unit]
